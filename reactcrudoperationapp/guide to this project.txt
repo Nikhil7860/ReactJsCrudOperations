@@ -1,0 +1,47 @@
+To install axios in React Application , This used to send req to fetch Api all request like get,put,delete etc
+
+npm install axios
+
+
+To Install json-server on react application 
+
+
+npm install -g json-server
+
+         OR
+
+npm i json-server
+
+-*and write below code into the package.json file used the start script
+
+ "json-server": "json-server --watch db.json --port 3003",
+
+
+
+For running two server on the same port like json and react application then install the below command in the react application 
+
+
+npm install concurrently
+
+
+
+then paste the below code into the package.json file in the react application 
+
+
+"start:dev": "concurrently \"npm start\" \"npm run json-server\"",
+
+
+npm start --to start react application 
+
+npm run json-server -- to start the jason server 
+
+
+
+This will help to run both the server on the same port 	
+
+
+
+In order to run this script made by us can be run on cmd by typing below command 
+
+
+npm run start:dev 
